@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: product_customers
+      - name: product_orders
+      - name: stripe_customers
+      - name: stripe_charges
+      - name: amplitude_events
