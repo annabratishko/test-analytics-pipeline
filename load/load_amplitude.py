@@ -5,12 +5,14 @@ import psycopg2
 from psycopg2.extras import Json
 
 DB_CONN = "dbname=analytics_pipeline"
-RAW_DIR = "data/raw/amplitude/manual_export3"
+RAW_DIR = "data/raw/amplitude"
+CUTOFF = "2026-08-12 11:00:00"  # anything before this is the corrupted pre-fix batch — never load it
 
 
-def load_events(conn):
+def run():
     paths = glob.glob(os.path.join(RAW_DIR, "**", "*.json"), recursive=True)
 
+    conn = psycopg2.connect(DB_CONN)
     cur = conn.cursor()
     cur.execute("""
         CREATE TABLE IF NOT EXISTS raw.amplitude_events (
@@ -24,6 +26,7 @@ def load_events(conn):
     """)
 
     total = 0
+    skipped = 0
     for path in paths:
         with open(path) as f:
             for line in f:
@@ -31,6 +34,10 @@ def load_events(conn):
                 if not line:
                     continue
                 event = json.loads(line)
+
+                if event["server_upload_time"] < CUTOFF:
+                    skipped += 1
+                    continue
 
                 cur.execute("""
                     INSERT INTO raw.amplitude_events
@@ -51,11 +58,9 @@ def load_events(conn):
         print(f"  processed {path}")
 
     conn.commit()
-    print(f"Loaded {total} events total")
+    conn.close()
+    print(f"Loaded {total} events total ({skipped} skipped as pre-fix corrupted data)")
 
 
 if __name__ == "__main__":
-    conn = psycopg2.connect(DB_CONN)
-    load_events(conn)
-    conn.close()
-    print("Done.")
+    run()

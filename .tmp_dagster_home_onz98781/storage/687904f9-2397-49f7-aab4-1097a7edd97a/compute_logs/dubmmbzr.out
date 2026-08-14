@@ -1,0 +1,6 @@
+Loading customers from data/raw/product/customers_2026-08-14T14-40-02.csv
+Loaded 200 customers
+  processed data/raw/product/orders_2026-08-14T14-28-10.csv (407 rows)
+  processed data/raw/product/orders_2026-08-14T14-40-02.csv (0 rows)
+Loaded 407 order records total (across all files)
+Done.

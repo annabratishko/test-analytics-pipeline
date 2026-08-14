@@ -1,0 +1,33 @@
+[0m12:40:05  Running with dbt=1.12.1
+[0m12:40:05  Registered adapter: postgres=1.11.0
+[0m12:40:05  Found 10 models, 5 data tests, 5 sources, 477 macros
+[0m12:40:05  
+[0m12:40:05  Concurrency: 4 threads (target='dev')
+[0m12:40:05  
+[0m12:40:05  1 of 10 START sql view model dbt_staging.stg_amplitude_events .................. [RUN]
+[0m12:40:05  2 of 10 START sql view model dbt_staging.stg_product_customers ................. [RUN]
+[0m12:40:05  3 of 10 START sql view model dbt_staging.stg_product_orders .................... [RUN]
+[0m12:40:05  4 of 10 START sql view model dbt_staging.stg_stripe_charges .................... [RUN]
+[0m12:40:05  1 of 10 OK created sql view model dbt_staging.stg_amplitude_events ............. [[32mCREATE VIEW[0m in 0.06s]
+[0m12:40:05  4 of 10 OK created sql view model dbt_staging.stg_stripe_charges ............... [[32mCREATE VIEW[0m in 0.06s]
+[0m12:40:05  5 of 10 START sql view model dbt_staging.stg_stripe_customers .................. [RUN]
+[0m12:40:05  6 of 10 START sql view model dbt_marts.fact_order_events ....................... [RUN]
+[0m12:40:05  2 of 10 OK created sql view model dbt_staging.stg_product_customers ............ [[32mCREATE VIEW[0m in 0.06s]
+[0m12:40:05  3 of 10 OK created sql view model dbt_staging.stg_product_orders ............... [[32mCREATE VIEW[0m in 0.06s]
+[0m12:40:05  7 of 10 START sql view model dbt_marts.fact_signups ............................ [RUN]
+[0m12:40:05  8 of 10 START sql view model dbt_marts.fact_payments ........................... [RUN]
+[0m12:40:05  6 of 10 OK created sql view model dbt_marts.fact_order_events .................. [[32mCREATE VIEW[0m in 0.03s]
+[0m12:40:05  5 of 10 OK created sql view model dbt_staging.stg_stripe_customers ............. [[32mCREATE VIEW[0m in 0.03s]
+[0m12:40:05  9 of 10 START sql view model dbt_marts.fact_orders ............................. [RUN]
+[0m12:40:05  10 of 10 START sql view model dbt_marts.dim_customers .......................... [RUN]
+[0m12:40:05  7 of 10 OK created sql view model dbt_marts.fact_signups ....................... [[32mCREATE VIEW[0m in 0.04s]
+[0m12:40:05  8 of 10 OK created sql view model dbt_marts.fact_payments ...................... [[32mCREATE VIEW[0m in 0.04s]
+[0m12:40:05  10 of 10 OK created sql view model dbt_marts.dim_customers ..................... [[32mCREATE VIEW[0m in 0.02s]
+[0m12:40:05  9 of 10 OK created sql view model dbt_marts.fact_orders ........................ [[32mCREATE VIEW[0m in 0.03s]
+[0m12:40:05  
+[0m12:40:05  Finished running 10 view models in 0 hours 0 minutes and 0.24 seconds (0.24s).
+[0m12:40:05  
+[0m12:40:05  [32mCompleted successfully[0m
+[0m12:40:05  
+[0m12:40:05  Done. PASS=10 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=10
+

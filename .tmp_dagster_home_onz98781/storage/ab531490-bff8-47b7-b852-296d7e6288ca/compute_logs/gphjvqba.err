@@ -1,0 +1,7 @@
+[32m2026-08-14 14:23:13 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - ab531490-bff8-47b7-b852-296d7e6288ca - 65360 - LOGS_CAPTURED - Capturing logs for process (pid: 65360).
+[32m2026-08-14 14:23:13 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - ab531490-bff8-47b7-b852-296d7e6288ca - 65360 - stripe_loaded - STEP_START - Started execution of step "stripe_loaded".
+[32m2026-08-14 14:23:13 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - ab531490-bff8-47b7-b852-296d7e6288ca - 65360 - stripe_loaded - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2026-08-14 14:23:13 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - ab531490-bff8-47b7-b852-296d7e6288ca - stripe_loaded - Writing file at: /Users/annabratishko/Documents/test-analytics-pipeline/.tmp_dagster_home_onz98781/storage/stripe_loaded using PickledObjectFilesystemIOManager...
+[32m2026-08-14 14:23:13 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - ab531490-bff8-47b7-b852-296d7e6288ca - 65360 - stripe_loaded - ASSET_MATERIALIZATION - Materialized value stripe_loaded.
+[32m2026-08-14 14:23:13 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - ab531490-bff8-47b7-b852-296d7e6288ca - 65360 - stripe_loaded - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2026-08-14 14:23:13 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - ab531490-bff8-47b7-b852-296d7e6288ca - 65360 - stripe_loaded - STEP_SUCCESS - Finished execution of step "stripe_loaded" in 45ms.

@@ -9,40 +9,41 @@ OUTPUT_DIR = "data/raw/product"
 STATE_DIR = "data/state"
 STATE_FILE = os.path.join(STATE_DIR, "product_db_watermark.json")
 
-os.makedirs(OUTPUT_DIR, exist_ok=True)
-os.makedirs(STATE_DIR, exist_ok=True)
+def run():
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    os.makedirs(STATE_DIR, exist_ok=True)
 
 
-def load_watermark():
-    if not os.path.exists(STATE_FILE):
-        return "1970-01-01T00:00:00"
-    with open(STATE_FILE) as f:
-        return json.load(f).get("orders_last_updated_at", "1970-01-01T00:00:00")
+    def load_watermark():
+        if not os.path.exists(STATE_FILE):
+            return "1970-01-01T00:00:00"
+        with open(STATE_FILE) as f:
+            return json.load(f).get("orders_last_updated_at", "1970-01-01T00:00:00")
 
 
-def save_watermark(timestamp):
-    with open(STATE_FILE, "w") as f:
-        json.dump({"orders_last_updated_at": timestamp}, f)
+    def save_watermark(timestamp):
+        with open(STATE_FILE, "w") as f:
+            json.dump({"orders_last_updated_at": timestamp}, f)
 
 
-def run_query(conn, query, params=()):
-    cur = conn.cursor()
-    cur.execute(query, params)
-    columns = [description[0] for description in cur.description]
-    rows = cur.fetchall()
-    return columns, rows
+    def run_query(conn, query, params=()):
+        cur = conn.cursor()
+        cur.execute(query, params)
+        columns = [description[0] for description in cur.description]
+        rows = cur.fetchall()
+        return columns, rows
 
 
-def save_csv(columns, rows, filename):
-    path = os.path.join(OUTPUT_DIR, filename)
-    with open(path, "w", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(columns)
-        writer.writerows(rows)
-    print(f"Saved {len(rows)} records to {path}")
+    def save_csv(columns, rows, filename):
+        path = os.path.join(OUTPUT_DIR, filename)
+        with open(path, "w", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow(columns)
+            writer.writerows(rows)
+        print(f"Saved {len(rows)} records to {path}")
 
 
-if __name__ == "__main__":
+
     conn = sqlite3.connect(DB_PATH)
     run_date = datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
 
@@ -69,3 +70,6 @@ if __name__ == "__main__":
 
     conn.close()
     print("Done.")
+
+if __name__ == "__main__":
+    run()

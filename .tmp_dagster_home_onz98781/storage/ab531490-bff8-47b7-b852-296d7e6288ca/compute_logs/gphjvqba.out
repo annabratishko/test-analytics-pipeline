@@ -1,0 +1,11 @@
+  processed data/raw/stripe/customers_2026-08-10T16-46-08.json (5 rows)
+  processed data/raw/stripe/customers_2026-08-13T17-38-12.json (0 rows)
+  processed data/raw/stripe/customers_2026-08-14T12-14-56.json (0 rows)
+  processed data/raw/stripe/customers_2026-08-14T14-23-11.json (0 rows)
+Loaded 5 customer records total
+  processed data/raw/stripe/charges_2026-08-10T16-46-08.json (5 rows)
+  processed data/raw/stripe/charges_2026-08-13T17-38-12.json (0 rows)
+  processed data/raw/stripe/charges_2026-08-14T12-14-56.json (0 rows)
+  processed data/raw/stripe/charges_2026-08-14T14-23-11.json (0 rows)
+Loaded 5 charges records total
+Done.
