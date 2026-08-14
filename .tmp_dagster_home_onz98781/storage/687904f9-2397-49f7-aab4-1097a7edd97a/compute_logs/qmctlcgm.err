@@ -1,7 +1,0 @@
-[32m2026-08-14 14:40:04 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 687904f9-2397-49f7-aab4-1097a7edd97a - 67084 - LOGS_CAPTURED - Capturing logs for process (pid: 67084).
-[32m2026-08-14 14:40:04 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 687904f9-2397-49f7-aab4-1097a7edd97a - 67084 - dbt_run - STEP_START - Started execution of step "dbt_run".
-[32m2026-08-14 14:40:06 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 687904f9-2397-49f7-aab4-1097a7edd97a - 67084 - dbt_run - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
-[32m2026-08-14 14:40:06 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 687904f9-2397-49f7-aab4-1097a7edd97a - dbt_run - Writing file at: /Users/annabratishko/Documents/test-analytics-pipeline/.tmp_dagster_home_onz98781/storage/dbt_run using PickledObjectFilesystemIOManager...
-[32m2026-08-14 14:40:06 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 687904f9-2397-49f7-aab4-1097a7edd97a - 67084 - dbt_run - ASSET_MATERIALIZATION - Materialized value dbt_run.
-[32m2026-08-14 14:40:06 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 687904f9-2397-49f7-aab4-1097a7edd97a - 67084 - dbt_run - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
-[32m2026-08-14 14:40:06 +0200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 687904f9-2397-49f7-aab4-1097a7edd97a - 67084 - dbt_run - STEP_SUCCESS - Finished execution of step "dbt_run" in 2.17s.

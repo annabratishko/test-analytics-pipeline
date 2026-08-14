@@ -1,6 +1,0 @@
-Extracting customers (full)...
-Saved 200 records to data/raw/product/customers_2026-08-14T14-23-12.csv
-Extracting orders updated after 2026-08-14T11:26:17.435436...
-Saved 8 records to data/raw/product/orders_2026-08-14T14-23-12.csv
-Updated watermark to 2026-08-14T13:04:54
-Done.
